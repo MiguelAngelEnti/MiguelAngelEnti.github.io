@@ -2,10 +2,10 @@
 <html>
 
 <head>
-	<title>Pagina magicofantastica</title>
+	<title>Pagina web de Miguel Angel Latre</title>
 	
 	<link rel="stylesheet" href="style.css">
-	
+		
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -13,8 +13,9 @@
 </head>
 
 <body>
+	
 	<header>
-		<h1>Pagina web de Miguel Angel Latre</h1>
+		<h1>Miguel Angel Latre Sole</h1>
 		<article class="list">
 			<nav>
 				<ul>
@@ -22,24 +23,27 @@
 					<a href="aboutme.html" class="quiensoy">Quien soy</a>
 					<a href="cv.html" class="cur">Curriculum</a>
 					<a href="login.html" class="log">Login</a>
-				</ul>	
+				</ul>
 			</nav>
 		</article>
 	</header>
 	
+	<main>		
+		
+		<form mehtod="GET">
+			<p><label for="form_user">Nombre:</label> <input type="text" name="user" id="form_user" required /></p>
+			<p><label for="form_birth">Fecha de nacimiento:</label> <input type="text" name="birth" id="form_birth" /></p>
+			<p><label for="form_email">E-mail:</label> <input type="text" name="email" id="form_email" required /></p>
+			<p><label for="form_phone">Telefono:</label> <input type="text" name="phone" id="form_phone" /></p>
+			<p><label for="form_color">Color favorito:</label> <input type="text" name="color" id="form_color" /></p>
+			<p><label for="form_message">Mensaje:</label> <input type="text" name="message" id="form_message" required /></p>
+			<p><input type="button" id="form_submit" value="Enviar" /></p>
+		</form>	
 	
-	<main>	
-		<article class="intro">
-			<section class="intro1">
-				<p><strong>¡Bienvenido a mi pagina!</strong></p>
-			</section>
-			<img src="welcome.png">	
-			<p><a href="aboutme.html">Mira mi perfil...</a></p>
-			<p><a href="cv.html">¡O mi curriculum!</a></p>
-		</article>	
 	</main>
 	
 	<footer>
+		<p>Copyright (c) 2023 ENTI</p>
 		<article class="list">
 			<nav>
 				<ul>
@@ -47,12 +51,12 @@
 					<a href="aboutme.html" class="quiensoy">Quien soy</a>
 					<a href="cv.html" class="cur">Curriculum</a>
 					<a href="login.html" class="log">Login</a>
-				</ul>	
+				</ul>
 			</nav>
 		</article>
-	<p>Copyright (c) 2024 ENTI</p>
+	
 	</footer>
-		
+	
 </body>
 
 </html>
