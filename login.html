@@ -8,7 +8,10 @@
 		
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Great+Vibes&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Great+Vibes&display=swap" rel="stylesheet">
+	
+	
+	<script src="login.js"></script>
 	
 </head>
 
@@ -22,35 +25,48 @@
 					<a href="index.html" class="portada">Portada</a>
 					<a href="aboutme.html" class="quiensoy">Quien soy</a>
 					<a href="cv.html" class="cur">Curriculum</a>
-					<a href="login.html" class="log">Login</a>
+					<a href="login.html" class="log">Contacto</a>
 				</ul>
 			</nav>
 		</article>
 	</header>
 	
 	<main>		
+	
 		
-		<form mehtod="GET">
-			<p><label for="form_user">Nombre:</label> <input type="text" name="user" id="form_user" required /></p>
-			<p><label for="form_birth">Fecha de nacimiento:</label> <input type="text" name="birth" id="form_birth" /></p>
-			<p><label for="form_email">E-mail:</label> <input type="text" name="email" id="form_email" required /></p>
-			<p><label for="form_phone">Telefono:</label> <input type="text" name="phone" id="form_phone" /></p>
-			<p><label for="form_color">Color favorito:</label> <input type="text" name="color" id="form_color" /></p>
-			<p><label for="form_message">Mensaje:</label> <input type="text" name="message" id="form_message" required /></p>
-			<p><input type="button" id="form_submit" value="Enviar" /></p>
+		<form mehtod="POST" action="envioFalso.html" onsubmit="process()" id="form">
+		
+			<h2>Formulario de contacto</h2>
+			
+			<p><label for="form_user">Nombre*:</label> <input type="text" name="user" id="form_user" required /></p>
+			<p><label for="form_birth">Fecha de nacimiento:</label> <input type="date" name="birth" id="form_birth" /></p>
+			<p><label for="form_email">E-mail*:</label> <input type="text" name="email" id="form_email" required /></p>
+			<p><label for="form_phone">Telefono:</label> <input type="number" name="phone" id="form_phone" /></p>
+			<p><label for="form_color">Color favorito:</label> <input type="color" name="color" id="form_color" /></p>
+			<p><label for="form_pokemon">Pokemon inicial:</label> <select name="pokemon" id="form_pokemon"> 
+			
+				<option value="001">Bulbasaur</option>
+				<option value="004">Charmander</option>
+				<option value="007">Squirtle</option>
+			
+			</select></p>
+			<p><label for="form_message">Mensaje*:</label> <textarea name="message" id="form_message" required ></textarea></p>
+			<p><output id="exit">*: Obligatorio</output></p>
+			<p><input type="submit" id="form_submit" value="Enviar" /></p>
+			
 		</form>	
 	
 	</main>
 	
 	<footer>
-		<p>Copyright (c) 2023 ENTI</p>
+		<p>Copyright (c) 2024 ENTI</p>
 		<article class="list">
 			<nav>
 				<ul>
 					<a href="index.html" class="portada">Portada</a>
 					<a href="aboutme.html" class="quiensoy">Quien soy</a>
 					<a href="cv.html" class="cur">Curriculum</a>
-					<a href="login.html" class="log">Login</a>
+					<a href="login.html" class="log">Contacto</a>
 				</ul>
 			</nav>
 		</article>

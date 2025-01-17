@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Juego</title>	
+	
+</head>
+
+<body>
+	
+	<header>
+		<h1>Pagina web de Miguel Angel Latre</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Portada</a></li>
+				<li><a href="aboutme.html">Quien soy</a></li>
+				<li><a href="cv.html">Curriculum</a></li>
+				<li><a href="game.html">Juego</a></li>
+			</ul>	
+		</nav>
+		
+		<script>
+
+let numeroMin = 1;
+
+let numeroMax = 100;
+
+let numeroRandom = Math.floor(Math.random() * numeroMax) + numeroMin;
+
+	
+		
+function check_numero()
+{
+	
+	let valor = document.getElementById("juegoNumero").value;
+	
+	let resultado = document.getElementById("resultado");
+	
+	
+	if (valor < numeroMin)
+	{
+		console.log("El valor debe ser mayor de " + (numeroMin-1));
+		return;
+	}
+	
+	if (valor > numeroMax)
+	{
+		console.log("El valor debe ser menor de " + (numeroMax+1));
+		return;
+	}
+	
+	let text = "";
+	
+	if (valor > numeroRandom)
+	{
+		text = "Muy alto";
+	}
+	else if (valor < numeroRandom)
+	{
+		text = "Muy bajo";
+	}
+	else
+	{
+		text = "Correcto";
+	}
+	
+	console.log(text);
+	
+	resultado.value = text;
+	
+}		
+		
+		</script>
+		
+		
+	</header>
+	
+	<main>
+	
+		<h2>Juegaco</h2>
+		<form>
+			<h3>Adivina el numero</h3>
+			
+			<p><output id="info"></p>
+			<p>Numero: <input type="number" id="juegoNumero" name="numero" /></p>
+			<p><output id="resultado"> "Introduce un numero en el campo de texto. </output>
+			<p><input type="button" value="¡Adivina!" onclick="check_numero();" /><p>
+			
+		</form>
+	
+	</main>
+	
+	<footer>
+	<nav>
+		<ul>
+			<li><a href="index.html">Portada</a></li>
+			<li><a href="aboutme.html">Quien soy</a></li>
+			<li><a href="cv.html">Curriculum</a></li>
+				<li><a href="game.html">Juego</a></li>
+		</ul>	
+	</nav>
+	<p>Copyright (c) 2024 ENTI</p>
+	</footer>
+		
+		<script>
+		
+let info = "Introduce un numero entre " + numeroMin + " y " + numeroMax + " para adivinar el numero"
+	
+document.getElementById("info").innerHTML = info;
+		
+		</script>
+		
+</body>
+
+</html>
