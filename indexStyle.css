@@ -129,31 +129,31 @@ a.gem
 
 	a.portada
 	{
-		padding: 35px 20px;
+		padding: 35px 18px;
 		right: 1100px;
 	}
 
 	a.quiensoy
 	{
-		padding: 35px 10px;
+		padding: 35px 8px;
 		right: 1000px;
 	}
 
 	a.cur
 	{
-		padding: 35px 6px;
+		padding: 35px 4px;
 		right: 900px;
 	}
 
 	a.log
 	{
-		padding: 35px 15px;
+		padding: 35px 13px;
 		right: 800px;
 	}
 
 	a.gem
 	{
-		padding: 35px 25px;
+		padding: 35px 23px;
 		right: 700px;
 	}
 }
