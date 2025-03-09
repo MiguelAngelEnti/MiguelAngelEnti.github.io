@@ -1,0 +1,115 @@
+h1
+{
+	font-family: "Arima", serif;
+	font-size: 80px;
+	text-align: center;
+}
+
+.intro
+{
+	font-family: "Arima", serif;
+	font-size: 40px;
+	text-align: center;
+}
+
+.intro1
+{
+	line-height: 7;
+}
+
+.profile
+{
+	font-family: "Arima", serif;
+	font-size: 40px;
+	text-align: center;
+}
+
+.profile1
+{
+	line-height: 7;
+}
+
+.curriculum
+{
+	font-family: "Arima", serif;
+	font-size: 40px;
+	text-align: center;
+}
+
+.curriculum1
+{
+	line-height: 7;
+}
+
+body
+{
+	background-color: #ff7373;
+}
+
+.theiko
+{
+	float: left;
+}
+
+.oppenheimernt
+{
+	float: right;
+}
+
+.prelist
+{
+	line-height: 15;
+}
+
+.list a
+{	
+    border: 1px outset buttonborder;
+    border-radius: 50%;
+    color: buttontext;
+    background-color: buttonface;
+    text-decoration: none;
+	position: absolute;
+	animation-name: spin;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear; 
+}
+
+a.portada
+{
+	padding: 35px 20px;
+	right: 1100px;
+}
+
+a.quiensoy
+{
+	padding: 35px 10px;
+	right: 1000px;
+}
+
+a.cur
+{
+	padding: 35px 6px;
+	right: 900px;
+}
+
+a.log
+{
+	padding: 35px 15px;
+	right: 800px;
+}
+
+a.gem
+{
+	padding: 35px 25px;
+	right: 700px;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
