@@ -36,47 +36,53 @@ let numeroMax = 100;
 
 let numeroRandom = Math.floor(Math.random() * numeroMax) + numeroMin;
 
-	
+let clickNum = 0;
+
+let win = false;
 		
 function check_numero()
 {
-	
-	let valor = document.getElementById("juegoNumero").value;
-	
-	let resultado = document.getElementById("resultado");
-	
-	
-	if (valor < numeroMin)
+	if (win == false)
 	{
-		console.log("El valor debe ser mayor de " + (numeroMin-1));
-		return;
+		clickNum++;
+		
+		let valor = document.getElementById("juegoNumero").value;
+		
+		let resultado = document.getElementById("resultado");
+		
+		let clickCounter = document.getElementById("clicks");
+		
+		let text = "";
+		
+		if (valor > numeroRandom)
+		{
+			text = "Muy alto";
+		}
+		else if (valor < numeroRandom)
+		{
+			text = "Muy bajo";
+		}
+		else
+		{
+			text = "Correcto";
+			
+			win = true;
+		}
+		
+		if (valor < numeroMin)
+		{
+			text = ("El valor debe ser mayor de " + (numeroMin-1));
+		}
+		
+		if (valor > numeroMax)
+		{
+			text = ("El valor debe ser menor de " + (numeroMax+1));
+		}
+		
+		resultado.value = text;
+		
+		clickCounter.value = "Tus clicks: " + clickNum + ".";
 	}
-	
-	if (valor > numeroMax)
-	{
-		console.log("El valor debe ser menor de " + (numeroMax+1));
-		return;
-	}
-	
-	let text = "";
-	
-	if (valor > numeroRandom)
-	{
-		text = "Muy alto";
-	}
-	else if (valor < numeroRandom)
-	{
-		text = "Muy bajo";
-	}
-	else
-	{
-		text = "Correcto";
-	}
-	
-	console.log(text);
-	
-	resultado.value = text;
-	
 }		
 		
 		</script>
@@ -93,7 +99,9 @@ function check_numero()
 			<p><output id="info"></p>
 			<p>Numero: <input type="number" id="juegoNumero" name="numero" /></p>
 			<p><output id="resultado"> "Introduce un numero en el campo de texto. </output>
-			<p><input type="button" value="¡Adivina!" onclick="check_numero();" /><p>
+			<p><input type="button" value="Adivina!" onclick="check_numero();" /><p>
+			
+			<p><output id="clicks"></p>
 			
 		</form>
 	
@@ -119,6 +127,9 @@ function check_numero()
 let info = "Introduce un numero entre " + numeroMin + " y " + numeroMax + " para adivinar el numero"
 	
 document.getElementById("info").innerHTML = info;
+
+
+document.getElementById("clicks").value = "Tus clicks: " + clickNum + ".";
 		
 		</script>
 		

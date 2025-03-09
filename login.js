@@ -14,7 +14,7 @@ function process()
 		
 		nombre.style.color = "#ff0000";
 		
-		nombre.style.border = "1px solid black";
+		nombre.style.border = "1px solid #ff0000";
 		
 		salida.style.color = "#ff0000";
 		
